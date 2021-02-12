@@ -1,0 +1,46 @@
+{
+    "name": "petap/event-subscriber",
+    "description": "Laminas Module. One place for manage application events",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas", "laminas module", "events"
+    ],
+    "homepage": "https://github.com/petap/EventSubscriber",
+    "authors": [
+        {
+            "name": "Yura Shirokikh",
+            "email": "shirokikh.yura@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "laminas/laminas-eventmanager": "3.3.*",
+        "laminas/laminas-servicemanager": "3.6.*",
+        "laminas/laminas-modulemanager": "2.10.*"
+    },
+    "require-dev" : {
+        "phpunit/phpunit": "^9.4",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpspec/prophecy-phpunit": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Petap\\EventSubscriber\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Petap\\EventSubscriberTest\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always"
+    }
+}
